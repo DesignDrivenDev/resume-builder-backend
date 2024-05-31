@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .section h2 {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1><%= user.firstName %> <%= user.lastName %></h1>
+    <p>Email: <%= user.email %></p>
+    <p>Address: <%= user.address %></p>
+    <p>Mobile: <%= user.mobileNumber %></p>
+  </div>
+  <div class="section">
+    <h2>Experiences</h2>
+    <ul>
+      <% user.experiences.forEach(exp => { %>
+        <li><%= exp %></li>
+      <% }) %>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>Projects</h2>
+    <% user.projects.forEach(proj => { %>
+      <h3><%= proj.title %></h3>
+      <ul>
+        <% proj.descriptions.forEach(desc => { %>
+          <li><%= desc %></li>
+        <% }) %>
+      </ul>
+    <% }) %>
+  </div>
+  <div class="section">
+    <h2>Hobbies</h2>
+    <ul>
+      <% user.hobbies.forEach(hobby => { %>
+        <li><%= hobby %></li>
+      <% }) %>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>Social Media</h2>
+    <ul>
+      <% user.socialMediaUrls.forEach(url => { %>
+        <li><a href="<%= url %>"><%= url %></a></li>
+      <% }) %>
+    </ul>
+  </div>
+</body>
+</html>
