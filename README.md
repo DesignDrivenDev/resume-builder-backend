@@ -21,45 +21,32 @@ html-pdf
 EJS
 Setup and Installation
 Backend
-Clone the repository:
 
-bash
-Copy code
+Clone the repository:
 git clone <your-backend-repo-url>
 cd backend
 Install dependencies:
 
-bash
-Copy code
 npm install
 Set up environment variables:
 Create a .env file in the root directory and add the following variables:
 
-env
-Copy code
+.env
 MONGO_URI=<your-mongodb-uri>
 PORT=8080
-Run the server:
 
-bash
-Copy code
+Run the server:
 npm start
 Frontend
 Clone the repository:
 
-bash
-Copy code
 git clone <your-frontend-repo-url>
 cd frontend
 Install dependencies:
 
-bash
-Copy code
 npm install
 Run the development server:
 
-bash
-Copy code
 npm run dev
 Usage
 User's Screen
